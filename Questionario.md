@@ -42,6 +42,12 @@ targets: prerequisites
  recipe: instruções de compilação
 
 #### (d) Como são definidas as dependências de um **target**, para que elas são utilizadas?
+As dependências de um target estão associadas as dependências dos prerequisites, pois cada um contem uma lista de arquivos que é necessário para
+realizar a sua compilação de maneira adequada e não gerar erros, elas são especificadas no contexto de compilação e compilados antes do target, senão
+o compilador não teria acesso aos recursos dos arquivos-fontes ou bibliotecas externas. O make utiliza elas para definir quais targets precisam ser 
+atualizados quando há uma mudança nos arquivos associados. Quando o utilitário é usado, ele verifica os timestamps dos arquivos de prerequisites e compara
+com o do target, se o do target for mais "velho" significa que ele precisa ser reconstruido, assim executa os comandos escritos na regra do makefile. A 
+prática descrita permite que o makefile seja uma ferramenta eficiente e de grande atualização.
 
 #### (e) O que são as regras do **Makefile**, qual a diferença entre regras implícitas e explícitas?
 
