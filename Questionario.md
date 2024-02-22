@@ -32,7 +32,6 @@ O utilitario make é um comando feito no terminal, o qual automatiza o processo 
 Ao digitar o make ele realiza a leitura das regras e dependencias descritas no arquivo makefile, vê quais arquivos precisam ser compilados novamente ou ser vinculados
 ao executavel final, gera arquivos objetos correspondentes, bem como, gera o programa final concluindo o processo de compilação. 
 
-
 #### (c) Qual é a sintaxe utilizada para criar um novo **target**?
 targets: prerequisites
 	recipe
@@ -50,6 +49,11 @@ com o do target, se o do target for mais "velho" significa que ele precisa ser r
 prática descrita permite que o makefile seja uma ferramenta eficiente e de grande atualização.
 
 #### (e) O que são as regras do **Makefile**, qual a diferença entre regras implícitas e explícitas?
+As regras informam quando o target está desatualizado e precisa reconstrui-lo, pois houve mudanças nos arquivos-fontes, bem como, oferta instruções de como reconstruir 
+o arquivo adequadamente e somente das partes necessárias não perdendo tempo de processamento com arquivos que não foram modificados. A regra explicita determina como e 
+quando refazer os arquivos, utilizando comando relacionados com o nome dos arquivos a serem compilados, já as implícitas utilizam as extensões dos arquivos para falar
+quais comandos devem ser executados, deixando o código mais generico, porém mais difícil de ser visualizado e compreendido.
+
 
 ## 4. Sobre a arquitetura **ARM Cortex-M** responda:
 
