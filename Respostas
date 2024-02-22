@@ -1,1 +1,9 @@
 Respostas do questionario
+
+
+1) Explique brevemente o que é compilação cruzada (cross-compiling) e para que ela serve.
+Consiste em criar um codigo direcionado para uma plataforma, contudo, o compilador dele será executado em outra,
+a mudança descrita pode ser entre sistemas operacionais ou até mesmo outras arquiteturas. Em razão da compilação
+cruzada o desenvolvedor consegue criar programas para plataformas as quais não esta trabalhando, principalmente 
+para dispositivos embarcados, pois a compilação não precisa ser executada no processador final. Ele é muito
+utilizado para criar sofwares destinados a uma ampla gama de plataformas, mas usando um so compilador. 
