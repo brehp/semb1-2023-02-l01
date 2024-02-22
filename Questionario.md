@@ -28,8 +28,18 @@ os programas utilizando o arquivo makefile.
 
 
 #### (b) Descreva brevemente o processo realizado pelo utilitário **make** para compilar um programa.
+O utilitario make é um comando feito no terminal, o qual automatiza o processo de compilação dos programas que teriam que ter grande comandos para serem compilados. 
+Ao digitar o make ele realiza a leitura das regras e dependencias descritas no arquivo makefile, vê quais arquivos precisam ser compilados novamente ou ser vinculados
+ao executavel final, gera arquivos objetos correspondentes, bem como, gera o programa final concluindo o processo de compilação. 
+
 
 #### (c) Qual é a sintaxe utilizada para criar um novo **target**?
+targets: prerequisites
+	recipe
+
+ Targets é o arquivo objeto, o arquivo que será gerado no final, como exemplo da aula o statup.o e o main.o
+ Prerequisites: são os arquivos originais que serão compilados, por exemplo main.c e startup.c
+ recipe: instruções de compilação
 
 #### (d) Como são definidas as dependências de um **target**, para que elas são utilizadas?
 
