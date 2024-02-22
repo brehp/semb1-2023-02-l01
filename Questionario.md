@@ -58,6 +58,11 @@ quais comandos devem ser executados, deixando o código mais generico, porém ma
 ## 4. Sobre a arquitetura **ARM Cortex-M** responda:
 
 ### (a) Explique o conjunto de instruções ***Thumb*** e suas principais vantagens na arquitetura ARM. Como o conjunto de instruções ***Thumb*** opera em conjunto com o conjunto de instruções ARM?
+O conjunto de instruções Thumb é vital para utilizar a arquitetura ARM, pois otimiza o seu desempenho, economiza espaço, além de reduzir o consumo de energia. O thumb 
+possui 16 bits e coexiste com o conjunto de instruções ARM que possuem 32 bits, seu principal objetivo é oferecer maior densidade ao codigo, já que economiza espaço de
+memoria, em razão de suas instruções serem mais curtas, melhora a eficiência do cache, já que as instruções são armazenadas nele e economiza energia, porque a memoria
+é menor. Como o thumb e o ARM coexistem, o desenvolvedor escolhe qual combinação melhor atende suas necessidades, essa posssibilidade garante uma maior flexibilidade
+sendo considerado uma vantagem ao processador ARM. 
 
 ### (b) Explique as diferenças entre as arquiteturas ***ARM Load/Store*** e ***Register/Register***.
 
