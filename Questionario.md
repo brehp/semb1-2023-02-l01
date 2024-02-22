@@ -21,6 +21,11 @@ Em suma, ele dita as condições necessárias para que o sistema execute o softw
 ## 3. Sobre o utilitário **make** e o arquivo **Makefile responda**:
 
 #### (a) Explique com suas palavras o que é e para que serve o **Makefile**.
+Ele é um arquivo utilizado para automatizar o processo de compilação e vinculação dos programas escrito pelo programador, dentro dele possui algumas regras
+que ditam como o programa deve ser compilado, bem como, as dependências dos arquivos de origem e a maneira de vincula-los ao executável final. Além disso,
+só compila arquivos que foram modificados desde a ultima compilação.Para executa-lo basta digitar o comando make no terminal, que ele compila automaticamente
+os programas utilizando o arquivo makefile.
+
 
 #### (b) Descreva brevemente o processo realizado pelo utilitário **make** para compilar um programa.
 
