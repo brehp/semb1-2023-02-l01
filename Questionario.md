@@ -10,6 +10,13 @@ utilizado para criar sofwares destinados a uma ampla gama de plataformas, mas us
 
 
 ## 2. O que é um código de inicialização ou ***startup*** e qual sua finalidade?
+Statup é um código que vem antes da chamada da função main, tendo como objetivo preparar o ambiente de trabalho para execução do programa
+principal, bem como, é constituído de rotinas de baixo nível. Quando o executável é carregado na memória o controle vai para uma rotina
+intermediaria que é descrita pelo código de inicialização que: inicializa os stacks, prepara os streams, adiciona ao stack os argumentos argc
+e argv, copia o conteúdo da seção .data e .fast da memória flash para RAM, inicializa o .bss em zero, inicializa o heap, inicializa alguma
+função de preparação do sistema operacional, faz a alocação da tabela de vetores de interrupção na memória e somente depois chama o main(). 
+Em suma, ele dita as condições necessárias para que o sistema execute o software de forma adequada.
+
 
 ## 3. Sobre o utilitário **make** e o arquivo **Makefile responda**:
 
