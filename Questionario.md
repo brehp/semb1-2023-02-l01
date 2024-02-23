@@ -65,6 +65,11 @@ memoria, em razão de suas instruções serem mais curtas, melhora a eficiência
 sendo considerado uma vantagem ao processador ARM. 
 
 ### (b) Explique as diferenças entre as arquiteturas ***ARM Load/Store*** e ***Register/Register***.
+A arquitetura ARM Load/Store, é um processador RISC e suas instruções de acesso à memória não interagem diretamente com os registradores. Ela possui duas instruções,
+a Load (LDR) que carrega dados da memória para o registrador, e a Store (STR) que armazena dados dos registradores na memória. A arquitetura simplificica o conjunto
+de instruções fazendo com que gaste menos energia, além de reduzir a complexidade. Todavia necessita de mais instruções para realizar operações aritmétricas.
+No que se refere a Register/Register, suas operações matematicas são realizadas diretamente nos registradores não tendo acesso à memoria, suas manipulações são
+mais eficiente e melhora o desempenho, contudo a complexidade do hardware aumenta e necessita de mais registradores. 
 
 ### (c) Os processadores **ARM Cortex-M** oferecem diversos recursos que podem ser explorados por sistemas baseados em **RTOS** (***Real Time Operating Systems***). Por exemplo, a separação da execução do código em níveis de acesso e diferentes modos de operação. Explique detalhadamente como funciona os níveis de acesso de execução de código e os modos de operação nos processadores **ARM Cortex-M**.
 
