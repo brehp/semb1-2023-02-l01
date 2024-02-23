@@ -81,6 +81,12 @@ podendo ocasionar em consequências piores, por fim o modo de depuração utiliz
 Em suma, os níveis de acesso ditam os limites do processador e os modos de operação como o processador vai lidar com um determinado evento e com ações limitadas ou não.
 
 ### (d) Explique como os processadores ARM tratam as exceções e as interrupções. Quais são os diferentes tipos de exceção e como elas são priorizadas? Descreva a estratégia de **group priority** e **sub-priority** presente nesse processo.
+As exceções e interrupções são tratadas pelo NVIC, ele que define qual será executada primeiro, a de maior urgência e a de menor, consegue fazer isso por meio de registradores, os quais
+são programáveis e modificados conforme o objetivo do desenvolvedor. Primeiramente é preciso definir que exceções são erros desencadeados durante a execução do código, por exemplo, divisão
+por zero, extrapolou a memória, execução de ações privilegiadas que não são permitidas, já a interrupção são eventos externos que interferem no fluxo normal do código, como entradas,
+temporizador, comunicação com periféricos. As prioridades das exceções é dada conforme a sua urgência e importância em relação ao programa, o NVIC possui dois níveis de prioridade para fazer o gerenciamento das exceções, o Group Priority que divide elas em diferentes grupos, os quais possuem prioridades diferentes, se dentro deles houver exceções com mesmo nível de prioridade utiliza a sub-priority, nelas as exceções são tratadas conforme a ordem de chegada.
+
+
 
 ### (e) Qual a diferença entre os registradores **CPSR** (***Current Program Status Register***) e **SPSR** (***Saved Program Status Register***)?
 
