@@ -66,12 +66,19 @@ sendo considerado uma vantagem ao processador ARM.
 
 ### (b) Explique as diferenças entre as arquiteturas ***ARM Load/Store*** e ***Register/Register***.
 A arquitetura ARM Load/Store, é um processador RISC e suas instruções de acesso à memória não interagem diretamente com os registradores. Ela possui duas instruções,
-a Load (LDR) que carrega dados da memória para o registrador, e a Store (STR) que armazena dados dos registradores na memória. A arquitetura simplificica o conjunto
-de instruções fazendo com que gaste menos energia, além de reduzir a complexidade. Todavia necessita de mais instruções para realizar operações aritmétricas.
-No que se refere a Register/Register, suas operações matematicas são realizadas diretamente nos registradores não tendo acesso à memoria, suas manipulações são
-mais eficiente e melhora o desempenho, contudo a complexidade do hardware aumenta e necessita de mais registradores. 
+a Load (LDR) que carrega dados da memória para o registrador, e a Store (STR) que armazena dados dos registradores na memória. A arquitetura simplifica o conjunto
+de instruções fazendo com que gaste menos energia, além de reduzir a complexidade. Todavia necessita de mais instruções para realizar operações aritméticas.
+No que se refere a Register/Register, as suas operações matemáticas são realizadas diretamente nos registradores não tendo acesso à memoria, as suas manipulações são
+mais eficiente e melhora o desempenho, contudo a complexidade do hardware aumenta e necessita de mais registradores.
 
 ### (c) Os processadores **ARM Cortex-M** oferecem diversos recursos que podem ser explorados por sistemas baseados em **RTOS** (***Real Time Operating Systems***). Por exemplo, a separação da execução do código em níveis de acesso e diferentes modos de operação. Explique detalhadamente como funciona os níveis de acesso de execução de código e os modos de operação nos processadores **ARM Cortex-M**.
+O ARM Cortex-M possui dois níveis de acesso, o privilegiado, no qual todas as funcionalidades do processador estão disponíveis para serem manipulados e o não privilegiado
+onde algumas restrições foram impostas pelo programador, afim de não afetar o bom funcionamento do programa e terceiros não acarretarem nenhum erro.  
+Em relação aos modos há quatro modos de operação: o modo de Usuário onde somente instruções predeterminadas são executadas, afim de garantir a compilação segura e sem erros
+do código fonte, além do acesso seguro à memória, modo de Interrupção, utilizado em interrupções e permite um acesso privilegiado em quando ela está sendo tratada, 
+bem como, garante a assiduidade na execução do código, Modo de Exceção, ativado quando há uma falha ou instrução inválida, permitindo que um erro não seja levado até o final
+podendo ocasionar em consequências piores, por fim o modo de depuração utilizado para depurar o código proporcionando acesso à recursos específicos. 
+Em suma, os níveis de acesso ditam os limites do processador e os modos de operação como o processador vai lidar com um determinado evento e com ações limitadas ou não.
 
 ### (d) Explique como os processadores ARM tratam as exceções e as interrupções. Quais são os diferentes tipos de exceção e como elas são priorizadas? Descreva a estratégia de **group priority** e **sub-priority** presente nesse processo.
 
