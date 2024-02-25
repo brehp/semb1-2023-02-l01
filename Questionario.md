@@ -97,6 +97,7 @@ O LR armazena o endereço da memória no qual a rotina estava acontecendo, desse
 O PSR é um registrador de 32 bits, que controla o processador e gerência suas interrupções, bem como, fala qual o estado recente de operação dele. Ele garante que a modificação do ambiente de execução possa ser executada utilizando instruções de baixo nível, além disso, combina registradores para torna-lo mais eficiente. 
 
 ### (h) O que é a tabela de vetores de interrupção?
+É uma tabela que contem informações de vários endereços na memória os quais indicam rotinas destinadas a tratamento de interrupções, quando há alguma interrupção o linker register e PSR salvam seu estado e posição para haver o tratamento desse contratempo, o endereço dessa sub-rotina está sendo apontado por uma das linhas dos vetores de interrupção. Nessa tabela há 15 vetores de interrupção destinados as exções advindas do processador, e 86 endereços para tratar interrupções ou eventos externos advindos do periférico, entretanto, todas elas são gerenciadas pelo NVIC. Por fim, ela é armazenada no início da FLASH, por ser um requisito de arquitetura.
 
 ### (i) Qual a finalidade do NVIC (**Nested Vectored Interrupt Controller**) nos microcontroladores ARM e como ele pode ser utilizado em aplicações de tempo real?
 
