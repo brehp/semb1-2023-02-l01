@@ -94,6 +94,7 @@ Já o SPSR é usado em interrupções e em chamadas de sub-rotinas, ele armazena
 O LR armazena o endereço da memória no qual a rotina estava acontecendo, desse modo, quando acabar a execução da subrotina o código irá saber o local que deve voltar, diminuindo as possibilidades de erros no retorno.
 
 ### (g) Qual o propósito do Program Status Register (PSR) nos processadores ARM?
+O PSR é um registrador de 32 bits, que controla o processador e gerência suas interrupções, bem como, fala qual o estado recente de operação dele. Ele garante que a modificação do ambiente de execução possa ser executada utilizando instruções de baixo nível, além disso, combina registradores para torna-lo mais eficiente. 
 
 ### (h) O que é a tabela de vetores de interrupção?
 
