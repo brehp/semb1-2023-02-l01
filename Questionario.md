@@ -91,6 +91,7 @@ O CPSR contem informações sobre o estado do processador, bits de condição, r
 Já o SPSR é usado em interrupções e em chamadas de sub-rotinas, ele armazena o estado do CPSR para depois da interrupção ele possa ser restaurado adequadamente sem nenhuma perda. Cada tipo de interrupção tem um SPSR diferente, em razão disso que consegue restaurar o CPSR de maneira tão completa. 
 
 ### (f) Qual a finalidade do **LR** (***Link Register***)?
+O LR armazena o endereço da memória no qual a rotina estava acontecendo, desse modo, quando acabar a execução da subrotina o código irá saber o local que deve voltar, diminuindo as possibilidades de erros no retorno.
 
 ### (g) Qual o propósito do Program Status Register (PSR) nos processadores ARM?
 
