@@ -86,9 +86,9 @@ são programáveis e modificados conforme o objetivo do desenvolvedor. Primeiram
 por zero, extrapolou a memória, execução de ações privilegiadas que não são permitidas, já a interrupção são eventos externos que interferem no fluxo normal do código, como entradas,
 temporizador, comunicação com periféricos. As prioridades das exceções é dada conforme a sua urgência e importância em relação ao programa, o NVIC possui dois níveis de prioridade para fazer o gerenciamento das exceções, o Group Priority que divide elas em diferentes grupos, os quais possuem prioridades diferentes, se dentro deles houver exceções com mesmo nível de prioridade utiliza a sub-priority, nelas as exceções são tratadas conforme a ordem de chegada.
 
-
-
 ### (e) Qual a diferença entre os registradores **CPSR** (***Current Program Status Register***) e **SPSR** (***Saved Program Status Register***)?
+O CPSR contem informações sobre o estado do processador, bits de condição, resultado das operações lógicas, controla as interrupções e o modo de operação delas, para isso utiliza flags: N, caso o sinal seja positivo ou negativo, Z, resultado zero, C quando há carry, V se estourar o campo de operação, I desabilita interrupções IRQ, F desabilita interrupções FIQ e T que explicita se o processador está executando instruções ARM ou thumb. 
+Já o SPSR é usado em interrupções e em chamadas de sub-rotinas, ele armazena o estado do CPSR para depois da interrupção ele possa ser restaurado adequadamente sem nenhuma perda. Cada tipo de interrupção tem um SPSR diferente, em razão disso que consegue restaurar o CPSR de maneira tão completa. 
 
 ### (f) Qual a finalidade do **LR** (***Link Register***)?
 
