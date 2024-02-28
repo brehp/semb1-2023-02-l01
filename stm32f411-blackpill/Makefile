@@ -1,3 +1,4 @@
+
 #Comando que corresponde ao compilador
 Compilado = arm-none-eabi-gcc
 
@@ -24,11 +25,11 @@ ComandoD = -MMD -MP -MF $(DiretorioD)/$*.d
 ListaO = $(patsubst %, $(DiretorioO)/%.o, $(basename $(ArquivoC)))
 
 #Cria diretorio onde os arquivos objetos vão ser feitos
-$(shell mkdir -p $(dir $(DiretorioO)) > /dev/null)
+$(shell mkdir -p $(dir $(ListaO)) > /dev/null)
 
 #Gera um lista de dependencia e cria seu diretorio 
 ListaD = $(patsubst %, $(DiretorioD)/%.d, $(basename $(ArquivoC)))
-$(shell mkdir -p $(dir $(DiretorioD)) > /dev/null)
+$(shell mkdir -p $(dir $(ListaD)) > /dev/null)
 
 #regra para executar todo o codigo pois makefile so faz a primeira regra
 all: $(ListaO)
